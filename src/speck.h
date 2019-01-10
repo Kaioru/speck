@@ -11,6 +11,7 @@ public:
 
     bool validate(std::string str);
     std::string correct(std::string str);
+    std::vector<std::string> suggestions(std::string str);
     std::vector<std::string> candidates(std::string str);
     std::vector<std::string> combinations(std::string str);
 };

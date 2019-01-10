@@ -19,6 +19,8 @@ void Trie::insert(std::string str) {
     for (auto &i : str) {
         auto index = i - 'a';
 
+        if (index < 0 || index > DOMAIN_SIZE) continue;
+
         if (!node->children[index])
             node->children[index] = new_node();
         node = node->children[index];

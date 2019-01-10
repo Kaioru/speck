@@ -10,10 +10,15 @@ bool Speck::validate(std::string str) {
 }
 
 std::string Speck::correct(std::string str) {
-    if (validate(str)) return str;
+    if (trie->search(str)) return str;
+    return suggestions(str)[0];
+}
 
+std::vector<std::string> Speck::suggestions(std::string str) {
     auto c = candidates(str);
     auto map = std::unordered_map<std::string, size_t>();
+
+    for (std::string i : c) map[i]++;
 
     std::sort(
             c.begin(),
@@ -24,7 +29,8 @@ std::string Speck::correct(std::string str) {
                 else if (map[a] < map[b]) return false;
                 return a < b;
             });
-    return c[0];
+    c.erase(unique(c.begin(), c.end()), c.end());
+    return c;
 }
 
 std::vector<std::string> Speck::candidates(std::string str) {
@@ -33,12 +39,6 @@ std::vector<std::string> Speck::candidates(std::string str) {
 
     if (trie->search(str)) result.push_back(str);
 
-    const auto level = 2;
-    auto current = combinations(str);
-
-    for (int i = 0; i < level; i++) {
-
-    }
     for (auto &c : combinations(str)) {
         for (auto &c2 : combinations(c))
             combos.push_back(c2);
