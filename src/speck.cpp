@@ -10,6 +10,8 @@ bool Speck::validate(std::string str) {
 }
 
 std::string Speck::correct(std::string str) {
+    if (validate(str)) return str;
+
     auto c = candidates(str);
     auto map = std::unordered_map<std::string, size_t>();
 
@@ -17,9 +19,7 @@ std::string Speck::correct(std::string str) {
             c.begin(),
             c.end(),
             [&map](std::string const &a, std::string const &b) {
-                if (a == b) {
-                    return false;
-                }
+                if (a == b) return false;
                 if (map[a] > map[b]) return true;
                 else if (map[a] < map[b]) return false;
                 return a < b;
