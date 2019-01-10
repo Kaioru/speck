@@ -1,4 +1,4 @@
 # speck
 yet another spell checker written for a school assignment.
 
-*(i can't think of a better name)*
+*(a spiffin' heck of a spell checker thats not a speck of dust)*
