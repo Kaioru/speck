@@ -8,4 +8,4 @@ file(GLOB src
         "src/*.cpp"
 )
 
-add_executable(speck ${src})
+add_executable(speck ${src} src/speck.h)
