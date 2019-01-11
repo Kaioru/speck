@@ -15,27 +15,76 @@ int main() {
 
     for (auto &row: filet) tree.insert(row[0]);
 
-    // TODO: a nice cli menu
-    auto suggestions = speck.suggestions("diarhoeaa");
+    while (true) {
+        std::cout << "=== speck menu ===" << std::endl;
+        std::cout << "1. check word" << std::endl;
+        std::cout << "2. add to dictionary" << std::endl;
+        std::cout << "4. words with prefix" << std::endl;
+        std::cout << "10. quit" << std::endl;
 
-    std::cout << "Did you mean: " << suggestions[0] << "?";
-    if (suggestions.size() > 1) {
-        std::vector<std::string> others(suggestions.begin() + 1,
-                                        suggestions.begin() + (suggestions.size() > 4
-                                                               ? 4
-                                                               : 4 - suggestions.size()));
+        int option;
+        std::cin >> option;
 
-        auto ss = std::stringstream();
+        switch (option) {
+            case 1: {
+                std::string word;
+                std::cout << "what word?" << std::endl;
+                std::cin >> word;
 
-        ss << " Or maybe: ";
-        for (int i = 0; i < others.size(); i++) {
-            ss << others[i];
-            if (i < others.size() - 2) ss << ", ";
-            else if (i == others.size() - 2) ss << " or ";
-            else ss << "?";
+                if (!speck.validate(word)) {
+                    auto suggestions = speck.suggestions(word);
+
+                    std::cout << "did you mean: " << suggestions[0] << "?";
+                    if (suggestions.size() > 1) {
+                        std::vector<std::string> others(suggestions.begin() + 1,
+                                                        suggestions.begin() + (suggestions.size() > 4
+                                                                               ? 4
+                                                                               : 4 - suggestions.size()));
+
+                        auto ss = std::stringstream();
+
+                        ss << " " << "or maybe: ";
+                        for (int i = 0; i < others.size(); i++) {
+                            ss << others[i];
+                            if (i < others.size() - 2) ss << ", ";
+                            else if (i == others.size() - 2) ss << " or ";
+                            else ss << "?";
+                        }
+
+                        std::cout << ss.str() << std::endl;
+                    }
+                } else std::cout << word << " " << "has a valid spelling." << std::endl;
+                break;
+            }
+            case 2: {
+                std::string word;
+                std::cout << "what word?" << std::endl;
+                std::cin >> word;
+
+                if (!tree.search(word)) {
+                    std::cout << word << " " << "is already in the dictionary." << std::endl;
+                    break;
+                }
+
+                tree.insert(word);
+                std::cout << word << " " << "has been added to the dictionary." << std::endl;
+                break;
+            }
+            case 4: {
+                std::string word;
+                std::cout << "what prefix?" << std::endl;
+                std::cin >> word;
+                auto results = tree.all_with_prefix(word);
+
+                std::cout << "found " << results->size() << " results with the prefix " << word << ":" << std::endl;
+                for (auto &i: *results)
+                    std::cout << i << std::endl;
+                break;
+            }
+            default:
+                std::cout << "Unknown option!" << std::endl;
+                return 0;
         }
-
-        std::cout << ss.str();
+        std::cout << std::endl;
     }
-    return 0;
 }
