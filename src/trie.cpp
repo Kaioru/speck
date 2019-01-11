@@ -35,8 +35,7 @@ bool Trie::search(std::string str) {
     for (auto &i : str) {
         auto index = i - 'a';
 
-        if (!node->children[index])
-            return false;
+        if (!node->children[index]) return false;
         node = node->children[index];
     }
 
@@ -65,8 +64,7 @@ std::vector<std::string> *Trie::all_with_prefix(std::string str) {
     for (auto &i : str) {
         auto index = i - 'a';
 
-        if (!node->children[index])
-            return result;
+        if (!node->children[index]) return result;
         node = node->children[index];
     }
 

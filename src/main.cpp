@@ -16,7 +16,7 @@ int main() {
     for (auto &row: filet) tree.insert(row[0]);
 
     // TODO: a nice cli menu
-    auto suggestions = speck.suggestions("henlo");
+    auto suggestions = speck.suggestions("diarhoeaa");
 
     std::cout << "Did you mean: " << suggestions[0] << "?";
     if (suggestions.size() > 1) {
