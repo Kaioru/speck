@@ -1,0 +1,660 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		6944173D05B74F44891ACC3E /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = E12F023995E84DDBBC7CCFEC /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				133E6CEF094042F8A6299568 /* CMake Rules */,
+			);
+			dependencies = (
+				5A213FFFE8E44BB3A199AAE2 /* PBXTargetDependency */,
+				5BBE539F2BA642FABBC4F261 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+		ADE53A2F99FE4D328D7C6F25 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 026ED2C874654DF59F2C1404 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				AF90C7C3B1164F1D876AD5F8 /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		00AFE4922DFE40828FF3212E /* /Users/keith/Workspace/speck/src/filet.h */ = {isa = PBXBuildFile; fileRef = B703981EDD5840278E7281BB /* /Users/keith/Workspace/speck/src/filet.h */; };
+		145FB8D4A43243739FF3FF11 /* /Users/keith/Workspace/speck/src/filet.cpp */ = {isa = PBXBuildFile; fileRef = 10CBBDA61B5240DDB8E54937 /* /Users/keith/Workspace/speck/src/filet.cpp */; };
+		17AD0C2FDC3640CDA1121EB5 /* /Users/keith/Workspace/speck/src/trie.h */ = {isa = PBXBuildFile; fileRef = E567D30D71704794B25DC17D /* /Users/keith/Workspace/speck/src/trie.h */; };
+		192FC1C4BECB45C19DD86E55 /* /Users/keith/Workspace/speck/src/speck.cpp */ = {isa = PBXBuildFile; fileRef = 437F1318E44445AB834622F7 /* /Users/keith/Workspace/speck/src/speck.cpp */; };
+		68F2747A857341039602E792 /* /Users/keith/Workspace/speck/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 0C561362209B4567B4E46E75 /* /Users/keith/Workspace/speck/CMakeLists.txt */; };
+		9643F4EDB73E4588A335BA48 /* /Users/keith/Workspace/speck/src/speck.h */ = {isa = PBXBuildFile; fileRef = 2EF18DE92C6541C795B9E7CB /* /Users/keith/Workspace/speck/src/speck.h */; };
+		B9F31FA506264CF4B0ED5F10 /* /Users/keith/Workspace/speck/src/trie.cpp */ = {isa = PBXBuildFile; fileRef = F56F0B20145D4F08A8EBCB0F /* /Users/keith/Workspace/speck/src/trie.cpp */; };
+		E811B581F7974D09ABC5E745 /* /Users/keith/Workspace/speck/src/main.cpp */ = {isa = PBXBuildFile; fileRef = 037AD92A04E14846A57BF257 /* /Users/keith/Workspace/speck/src/main.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		0A5263D34B4F4B6DAADB7F9B /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		10E0BF40C41B4DED822BCB7D /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		A047EC1CE82D4028817ACE6E /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		D63FF42D3825410799061B9C /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		14F84594C0F64A2380222FAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A07170F14B1A4FDDB18431B2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ADE53A2F99FE4D328D7C6F25;
+			remoteInfo = ZERO_CHECK;
+		};
+		63290A55CCE74FF8B41F9480 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A07170F14B1A4FDDB18431B2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ADE53A2F99FE4D328D7C6F25;
+			remoteInfo = ZERO_CHECK;
+		};
+		CC594BDA09DE45338D3E8B92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A07170F14B1A4FDDB18431B2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D126959619B54F79A7F11BEB;
+			remoteInfo = speck;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		037AD92A04E14846A57BF257 /* /Users/keith/Workspace/speck/src/main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
+		0C561362209B4567B4E46E75 /* /Users/keith/Workspace/speck/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		0F169B37279148AA87DC5EF7 /* /Users/keith/Workspace/speck/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		10CBBDA61B5240DDB8E54937 /* /Users/keith/Workspace/speck/src/filet.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = filet.cpp; path = src/filet.cpp; sourceTree = SOURCE_ROOT; };
+		2EF18DE92C6541C795B9E7CB /* /Users/keith/Workspace/speck/src/speck.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = speck.h; path = src/speck.h; sourceTree = SOURCE_ROOT; };
+		437F1318E44445AB834622F7 /* /Users/keith/Workspace/speck/src/speck.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = speck.cpp; path = src/speck.cpp; sourceTree = SOURCE_ROOT; };
+		B703981EDD5840278E7281BB /* /Users/keith/Workspace/speck/src/filet.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = filet.h; path = src/filet.h; sourceTree = SOURCE_ROOT; };
+		E567D30D71704794B25DC17D /* /Users/keith/Workspace/speck/src/trie.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = trie.h; path = src/trie.h; sourceTree = SOURCE_ROOT; };
+		F56F0B20145D4F08A8EBCB0F /* /Users/keith/Workspace/speck/src/trie.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = trie.cpp; path = src/trie.cpp; sourceTree = SOURCE_ROOT; };
+		F95E06A29A0D4427A25C8906 /* speck */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = speck; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		021DAC5F06E24CBD917B25DB = {
+			isa = PBXGroup;
+			children = (
+				1813FF450AE0450D9647EA96 /* speck */,
+				5F14650D645548ECAB7502E9 /* ALL_BUILD */,
+				B8124BB089394E6984794BD2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1813FF450AE0450D9647EA96 /* speck */ = {
+			isa = PBXGroup;
+			children = (
+				A3DBD82C35C441378B75AAEA /* Source Files */,
+				CCABA63C7FD2468E815A9667 /* Header Files */,
+				0C561362209B4567B4E46E75 /* /Users/keith/Workspace/speck/CMakeLists.txt */,
+			);
+			name = speck;
+			sourceTree = "<group>";
+		};
+		5F14650D645548ECAB7502E9 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				B8344FE5FFEE4962B6662856 /* CMake Rules */,
+				0F169B37279148AA87DC5EF7 /* /Users/keith/Workspace/speck/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		A3DBD82C35C441378B75AAEA /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				10CBBDA61B5240DDB8E54937 /* /Users/keith/Workspace/speck/src/filet.cpp */,
+				037AD92A04E14846A57BF257 /* /Users/keith/Workspace/speck/src/main.cpp */,
+				437F1318E44445AB834622F7 /* /Users/keith/Workspace/speck/src/speck.cpp */,
+				F56F0B20145D4F08A8EBCB0F /* /Users/keith/Workspace/speck/src/trie.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		B8124BB089394E6984794BD2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F95E06A29A0D4427A25C8906 /* speck */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B8344FE5FFEE4962B6662856 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		CCABA63C7FD2468E815A9667 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				B703981EDD5840278E7281BB /* /Users/keith/Workspace/speck/src/filet.h */,
+				2EF18DE92C6541C795B9E7CB /* /Users/keith/Workspace/speck/src/speck.h */,
+				E567D30D71704794B25DC17D /* /Users/keith/Workspace/speck/src/trie.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D126959619B54F79A7F11BEB /* speck */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9DF1C82E5E84A4A97A3B852 /* Build configuration list for PBXNativeTarget "speck" */;
+			buildPhases = (
+				49639762DE454B83B8BAC355 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3C29003A5CDF4C76BA3444C5 /* PBXTargetDependency */,
+			);
+			name = speck;
+			productName = speck;
+			productReference = F95E06A29A0D4427A25C8906 /* speck */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A07170F14B1A4FDDB18431B2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1010;
+			};
+			buildConfigurationList = 4141FC805B7B41C7B45C9F9C /* Build configuration list for PBXProject "speck" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				A047EC1CE82D4028817ACE6E /* Debug */,
+				10E0BF40C41B4DED822BCB7D /* Release */,
+				D63FF42D3825410799061B9C /* MinSizeRel */,
+				0A5263D34B4F4B6DAADB7F9B /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = 021DAC5F06E24CBD917B25DB;
+			projectDirPath = .;
+			projectRoot = "";
+			targets = (
+				6944173D05B74F44891ACC3E /* ALL_BUILD */,
+				ADE53A2F99FE4D328D7C6F25 /* ZERO_CHECK */,
+				D126959619B54F79A7F11BEB /* speck */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		133E6CEF094042F8A6299568 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/keith/Workspace/speck -f /Users/keith/Workspace/speck/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		173EDC17A8BA4A99BD39E106 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		AF90C7C3B1164F1D876AD5F8 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/keith/Workspace/speck -f /Users/keith/Workspace/speck/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		EE31D12D1DF344A08F5A0B4D = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		49639762DE454B83B8BAC355 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				145FB8D4A43243739FF3FF11 /* /Users/keith/Workspace/speck/src/filet.cpp */,
+				E811B581F7974D09ABC5E745 /* /Users/keith/Workspace/speck/src/main.cpp */,
+				192FC1C4BECB45C19DD86E55 /* /Users/keith/Workspace/speck/src/speck.cpp */,
+				B9F31FA506264CF4B0ED5F10 /* /Users/keith/Workspace/speck/src/trie.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3C29003A5CDF4C76BA3444C5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ADE53A2F99FE4D328D7C6F25 /* ZERO_CHECK */;
+			targetProxy = 14F84594C0F64A2380222FAD /* PBXContainerItemProxy */;
+		};
+		5A213FFFE8E44BB3A199AAE2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ADE53A2F99FE4D328D7C6F25 /* ZERO_CHECK */;
+			targetProxy = 63290A55CCE74FF8B41F9480 /* PBXContainerItemProxy */;
+		};
+		5BBE539F2BA642FABBC4F261 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D126959619B54F79A7F11BEB /* speck */;
+			targetProxy = CC594BDA09DE45338D3E8B92 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1798B71D19064155AB68E8B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = /Users/keith/Workspace/speck/build;
+			};
+			name = Debug;
+		};
+		1CC5AD1F09DD40A2AF09D3B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/keith/Workspace/speck;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		3A1D3C78A7AF4F8EAB9CB0D5 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = /Users/keith/Workspace/speck/build;
+			};
+			name = MinSizeRel;
+		};
+		582A8F90676D421989C1C1BC /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/keith/Workspace/speck;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		588FA06860DB4B9694B6FCF0 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/keith/Workspace/speck;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		85001BE85C294742B8E362CB /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++14'  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = speck;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/keith/Workspace/speck;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		86EDF2A35FF64305AAA142E5 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = /Users/keith/Workspace/speck/build;
+			};
+			name = RelWithDebInfo;
+		};
+		8D9452C6652C49F1BC66D107 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/keith/Workspace/speck;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		8F309CBC14744DCAA5EDDAC3 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/keith/Workspace/speck;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		99EEF0E17233478483D8C027 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=gnu++14'  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = speck;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/keith/Workspace/speck;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		9CE84CFD2CDF435BB4FB21E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "   '-std=gnu++14'  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = speck;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/keith/Workspace/speck;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		9E9423119FF74DCEA367821C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/keith/Workspace/speck;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		C0BC2A8C72104B9EA5AC5597 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = /Users/keith/Workspace/speck/build;
+			};
+			name = Release;
+		};
+		CB0E97E6027147D5B353C8CB /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/keith/Workspace/speck;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		FAA03097EA65449D968F2AD1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++14'  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = speck;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/keith/Workspace/speck;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		FB602D526C4F43FD8F898228 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/keith/Workspace/speck;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		026ED2C874654DF59F2C1404 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E9423119FF74DCEA367821C /* Debug */,
+				FB602D526C4F43FD8F898228 /* Release */,
+				8F309CBC14744DCAA5EDDAC3 /* MinSizeRel */,
+				582A8F90676D421989C1C1BC /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		4141FC805B7B41C7B45C9F9C /* Build configuration list for PBXProject "speck" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1798B71D19064155AB68E8B3 /* Debug */,
+				C0BC2A8C72104B9EA5AC5597 /* Release */,
+				3A1D3C78A7AF4F8EAB9CB0D5 /* MinSizeRel */,
+				86EDF2A35FF64305AAA142E5 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C9DF1C82E5E84A4A97A3B852 /* Build configuration list for PBXNativeTarget "speck" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CE84CFD2CDF435BB4FB21E1 /* Debug */,
+				FAA03097EA65449D968F2AD1 /* Release */,
+				85001BE85C294742B8E362CB /* MinSizeRel */,
+				99EEF0E17233478483D8C027 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E12F023995E84DDBBC7CCFEC /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D9452C6652C49F1BC66D107 /* Debug */,
+				1CC5AD1F09DD40A2AF09D3B8 /* Release */,
+				CB0E97E6027147D5B353C8CB /* MinSizeRel */,
+				588FA06860DB4B9694B6FCF0 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A07170F14B1A4FDDB18431B2 /* Project object */;
+}
