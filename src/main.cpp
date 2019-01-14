@@ -11,9 +11,12 @@ int main() {
 
     std::ifstream in("dictionary.csv");
     if (!in) std::cout << "Failed to load dictionary.csv" << std::endl;
+    auto begin = clock();
     auto filet = Filet(&in);
 
     for (auto &row: filet) tree.insert(row[0]);
+    auto end = clock();
+    std::cout << "Loaded " << tree.all()->size() << " words in " << double(end - begin) / CLOCKS_PER_SEC << "s" << std::endl;
 
     while (true) {
         std::cout << "=== speck menu ===" << std::endl;
