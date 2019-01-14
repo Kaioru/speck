@@ -18,8 +18,10 @@ int main() {
     while (true) {
         std::cout << "=== speck menu ===" << std::endl;
         std::cout << "1. check word" << std::endl;
-        std::cout << "2. add to dictionary" << std::endl;
-        std::cout << "4. words with prefix" << std::endl;
+        std::cout << "2. spell check file (WIP)" << std::endl;
+        std::cout << "3. add to dictionary" << std::endl;
+        std::cout << "4. save dictionary (WIP)" << std::endl;
+        std::cout << "5. words with prefix" << std::endl;
         std::cout << "10. quit" << std::endl;
 
         int option;
@@ -56,7 +58,7 @@ int main() {
                 } else std::cout << word << " " << "has a valid spelling." << std::endl;
                 break;
             }
-            case 2: {
+            case 3: {
                 std::string word;
                 std::cout << "what word?" << std::endl;
                 std::cin >> word;
@@ -70,7 +72,7 @@ int main() {
                 std::cout << word << " " << "has been added to the dictionary." << std::endl;
                 break;
             }
-            case 4: {
+            case 5: {
                 std::string word;
                 std::cout << "what prefix?" << std::endl;
                 std::cin >> word;
