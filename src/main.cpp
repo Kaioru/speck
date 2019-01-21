@@ -178,9 +178,11 @@ int main() {
                     std::cout << i << std::endl;
                 break;
             }
+            case 10:
+                return 0;
             default:
                 std::cout << "Unknown option!" << std::endl;
-                return 0;
+                break;
         }
         std::cout << std::endl;
     }
