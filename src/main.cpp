@@ -27,7 +27,7 @@ int main() {
         std::cout << "1. check word" << std::endl;
         std::cout << "2. spell check file" << std::endl;
         std::cout << "3. add to dictionary" << std::endl;
-        std::cout << "4. save dictionary (WIP)" << std::endl;
+        std::cout << "4. save dictionary" << std::endl;
         std::cout << "5. words with prefix" << std::endl;
         std::cout << "10. quit" << std::endl;
 
@@ -129,13 +129,37 @@ int main() {
                 std::cout << "what word?" << std::endl;
                 std::cin >> word;
 
-                if (!tree.search(word)) {
+                if (tree.search(word)) {
                     std::cout << word << " " << "is already in the dictionary." << std::endl;
                     break;
                 }
 
                 tree.insert(word);
                 std::cout << word << " " << "has been added to the dictionary." << std::endl;
+                break;
+            }
+            case 4: {
+                std::string path;
+
+                std::cout << "which file?" << std::endl;
+                std::cin >> path;
+
+                std::ofstream out(path);
+                Filet filet = Filet();
+                auto begin = clock();
+                auto words = *tree.all();
+
+                for (auto &word : words)
+                    filet.push_back({word});
+
+                filet.write(&out);
+
+                auto end = clock();
+                std::cout << "Wrote "
+                          << words.size()
+                          << " words in "
+                          << double(end - begin) / CLOCKS_PER_SEC
+                          << "s" << std::endl;
                 break;
             }
             case 5: {
