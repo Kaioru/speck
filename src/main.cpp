@@ -16,12 +16,16 @@ int main() {
 
     for (auto &row: filet) tree.insert(row[0]);
     auto end = clock();
-    std::cout << "Loaded " << tree.all()->size() << " words in " << double(end - begin) / CLOCKS_PER_SEC << "s" << std::endl;
+    std::cout << "Loaded "
+              << tree.all()->size()
+              << " words in "
+              << double(end - begin) / CLOCKS_PER_SEC << "s"
+              << std::endl;
 
     while (true) {
         std::cout << "=== speck menu ===" << std::endl;
         std::cout << "1. check word" << std::endl;
-        std::cout << "2. spell check file (WIP)" << std::endl;
+        std::cout << "2. spell check file" << std::endl;
         std::cout << "3. add to dictionary" << std::endl;
         std::cout << "4. save dictionary (WIP)" << std::endl;
         std::cout << "5. words with prefix" << std::endl;
@@ -59,6 +63,65 @@ int main() {
                         std::cout << ss.str() << std::endl;
                     }
                 } else std::cout << word << " " << "has a valid spelling." << std::endl;
+                break;
+            }
+            case 2: {
+                struct SpellingError {
+                    int row;
+                    int col;
+                    std::string original;
+                    std::string suggestion;
+                };
+
+                auto errors = *new std::vector<SpellingError>();
+                std::string path;
+
+                std::cout << "which file?" << std::endl;
+                std::cin >> path;
+
+                std::ifstream in(path);
+                if (!in) {
+                    std::cout << "Failed to load" << " " << path << std::endl;
+                    break;
+                }
+                auto begin = clock();
+                auto count = 0;
+                auto filet = Filet(&in, " ");
+
+                auto rowCount = 0;
+                for (auto &row: filet) {
+                    auto colCount = 0;
+
+                    rowCount++;
+                    for (auto &col: row) {
+                        count++;
+                        colCount++;
+                        if (!speck.validate(col))
+                            errors.push_back({rowCount, colCount, col, speck.correct(col)});
+                    }
+                }
+
+                auto end = clock();
+                std::cout << "Checked "
+                          << count
+                          << " words in "
+                          << double(end - begin) / CLOCKS_PER_SEC
+                          << "s" << std::endl;
+                std::cout << "Found "
+                          << errors.size()
+                          << " spelling errors"
+                          << std::endl;
+                std::cout << std::endl;
+
+                for (auto &error : errors) {
+                    std::cout << error.original
+                              << " at "
+                              << error.row << ":" << error.col
+                              << " (did you mean "
+                              << error.suggestion
+                              << "?)"
+                              << std::endl;
+                }
                 break;
             }
             case 3: {
