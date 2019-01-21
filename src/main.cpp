@@ -43,6 +43,11 @@ int main() {
                 if (!speck.validate(word)) {
                     auto suggestions = speck.suggestions(word);
 
+                    if (suggestions.empty()) {
+                        std::cout << word << " " << "has an invalid spelling." << std::endl;
+                        break;
+                    }
+
                     std::cout << "did you mean: " << suggestions[0] << "?";
                     if (suggestions.size() > 1) {
                         std::vector<std::string> others(suggestions.begin() + 1,
