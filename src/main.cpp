@@ -39,6 +39,7 @@ int main() {
                 std::string word;
                 std::cout << "what word?" << std::endl;
                 std::cin >> word;
+                std::transform(word.begin(), word.end(), word.begin(), ::tolower);
 
                 if (!speck.validate(word)) {
                     auto suggestions = speck.suggestions(word);
@@ -133,7 +134,8 @@ int main() {
                 std::string word;
                 std::cout << "what word?" << std::endl;
                 std::cin >> word;
-
+                std::transform(word.begin(), word.end(), word.begin(), ::tolower);
+                
                 if (tree.search(word)) {
                     std::cout << word << " " << "is already in the dictionary." << std::endl;
                     break;
@@ -143,6 +145,7 @@ int main() {
                 std::cout << word << " " << "has been added to the dictionary." << std::endl;
                 break;
             }
+                
             case 4: {
                 std::string path;
 
@@ -171,6 +174,7 @@ int main() {
                 std::string word;
                 std::cout << "what prefix?" << std::endl;
                 std::cin >> word;
+                std::transform(word.begin(), word.end(), word.begin(), ::tolower);
                 auto results = tree.all_with_prefix(word);
 
                 std::cout << "found " << results->size() << " results with the prefix " << word << ":" << std::endl;
